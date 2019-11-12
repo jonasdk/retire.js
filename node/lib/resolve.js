@@ -31,7 +31,6 @@ function listdep(parent, dep, level, deps) {
 			if (dedup[id]) continue;
 			dedup[id] = true;
 			var d = {
-				module: { component: i, version: o.dep.dependencies[i].version }
 				component: i,
 				version: o.dep.dependencies[i].version,
 				parent: o.parent,
