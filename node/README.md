@@ -37,7 +37,7 @@ Options:
   --ignorefile <path>      Custom ignore file, defaults to .retireignore / .retireignore.json
   --severity <level>       Specify the bug severity level from which the process fails. Allowed levels none, low, medium, high, critical. Default: none
   --exitwith <code>        Custom exit code (default: 13) when vulnerabilities are found
-	--lockfile <type>        Use lockfile instead of package scan. Allowed types npm, yarn, yarn-workspace
+  --lockfile <type>        Use lockfile instead of package scan. Allowed types npm, yarn, yarn-workspace
   --colors                 Enable color output (console output only)
 ````
 
