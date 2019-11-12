@@ -29,7 +29,7 @@ function emitResults(finding, options) {
 function shouldIgnorePath(fileSpecs, ignores) {
   return utils.detect(ignores.paths, function(i) {
     return utils.detect(fileSpecs, function(j) {
-      return j.indexOf(i) === 0 || j.indexOf(path.resolve(i)) === 0 ; 
+      return j.indexOf(i) === 0 || j.indexOf(path.resolve(i)) === 0 ;
     });
   });
 }
@@ -88,7 +88,7 @@ function scanDependencies(dependencies, nodeRepo, options) {
     if (options.ignore && shouldIgnorePath(fileSpecs, options.ignore)) {
       continue;
     }
-    results = retire.scanNodeDependency(dependencies[i].module, nodeRepo, options);
+    results = retire.scanNodeDependency(dependencies[i], nodeRepo, options);
     emitResults({file: dependencies[i].file, results: results}, options);
   }
 }
@@ -132,5 +132,3 @@ exports.scanBowerFile = function(file, repo, options) {
 exports.on = function(name, listener) {
   events.on(name, listener);
 };
-
-
