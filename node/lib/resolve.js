@@ -32,6 +32,10 @@ function listdep(parent, dep, level, deps) {
 			dedup[id] = true;
 			var d = {
 				module: { component: i, version: o.dep.dependencies[i].version }
+				component: i,
+				version: o.dep.dependencies[i].version,
+				parent: o.parent,
+				level: o.level,
 			};
 			if (o.dep.dependencies[i].path) {
 				d.file = "node_modules" + o.dep.dependencies[i].path.split("node_modules").slice(1).join("node_modules") + '/package.json'
